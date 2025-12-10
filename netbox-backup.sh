@@ -1,5 +1,5 @@
 #!/bin/bash
-BACKUP_DIR="netbox-backup-$(date +%Y%m%d-%H%M%S)"
+BACKUP_DIR="backups/netbox-backup-$(date +%Y%m%d-%H%M%S)"
 mkdir -p "$BACKUP_DIR"
 
 # Backup database

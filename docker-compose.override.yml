@@ -5,13 +5,20 @@ services:
     ports:
       - 8000:8080
     healthcheck:
-      start_period: 300s
+      start_period: 60s
     build:
       context: .
-      dockerfile: Dockerfile-Plugins
+      dockerfile: Dockerfile-Plugin
   netbox-worker:
     image: netbox:latest-plugins
+    restart: unless-stopped
     pull_policy: never
   netbox-housekeeping:
     image: netbox:latest-plugins
     pull_policy: never
+  postgres:
+    restart: unless-stopped
+  redis:
+    restart: unless-stopped
+  redis-cache:
+    restart: unless-stopped
