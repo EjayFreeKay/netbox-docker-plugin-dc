@@ -8,7 +8,7 @@ services:
       start_period: 60s
     build:
       context: .
-      dockerfile: Dockerfile-Plugin
+      dockerfile: Dockerfile-Plugins
   netbox-worker:
     image: netbox:latest-plugins
     restart: unless-stopped

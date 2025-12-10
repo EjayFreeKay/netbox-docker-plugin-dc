@@ -1,2 +1,4 @@
 netbox-floorplan-plugin
 netbox-topology-views
+netbox-reorder-rack
+
